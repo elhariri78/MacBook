@@ -1,0 +1,14 @@
+``python
+class Project:
+    def __init__(self, name):
+        self.name = name
+        self.functions = {}
+
+    def add_function(self, func_name, code):
+        self.functions[func_name] = code
+
+    def remove_function(self, func_name):
+        if func_name in self.functions:
+            del self.functions[func_name]
+        else:
+            print(f"No such function: {func_name}")
